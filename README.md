@@ -21,17 +21,18 @@ Este projeto demonstra a aplicação de conceitos de Arquitetura de Microsservi�
    Cada microsserviço possui seu próprio Dockerfile que utiliza um estágio multi-stage para criar uma imagem leve.
    Construir as Imagens: Na pasta raiz de cada microsserviço, execute:# Exemplo para o professional-service
 docker build -t professional-service:latest .
-# Exemplo para o uclient-service
+## Exemplo para o uclient-service
 docker build -t uclient-service:latest .
 
-Executar os Containers e Criar a Rede: Para que os serviços se comuniquem, eles devem estar na mesma rede Docker.# 1. Crie uma rede (se ainda não existir)
+Executar os Containers e Criar a Rede: Para que os serviços se comuniquem, eles devem estar na mesma rede Docker.
+## 1. Crie uma rede (se ainda não existir)
 docker network create marketplace-net
 
-# 2. Rode o professional-service (Serviço de Dependência)
+## 2. Rode o professional-service (Serviço de Dependência)
 docker run -d --name professional -p 8081:8081 --network marketplace-net professional-service:latest
 
-# 3. Rode o uclient-service
-# O Client Service DEVE usar o nome do container do outro serviço (professional) como hostname.
+## 3. Rode o uclient-service
+## O Client Service DEVE usar o nome do container do outro serviço (professional) como hostname.
 docker run -d --name uclient -p 8080:8080 --network marketplace-net uclient-service:latest
 
 6. Integração Contínua (CI) com GitHub ActionsO arquivo de workflow ci.yml garante que a compilação e os testes sejam executados automaticamente em cada push para o repositório.Localização do Arquivo: .github/workflows/ci.yml8.
