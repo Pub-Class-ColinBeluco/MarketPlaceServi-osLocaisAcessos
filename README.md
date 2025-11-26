@@ -1,7 +1,7 @@
 Acesso aos demais projetos:
-https://github.com/Pub-Class-ColinBeluco/professionalendpoint
-https://github.com/Pub-Class-ColinBeluco/uclientpoint
-https://github.com/Pub-Class-ColinBeluco/chatendpoint
+- https://github.com/Pub-Class-ColinBeluco/professionalendpoint
+- https://github.com/Pub-Class-ColinBeluco/uclientpoint
+- https://github.com/Pub-Class-ColinBeluco/chatendpoint
 
 Projeto de Microsserviços - Marketplace de Serviços
 Este projeto demonstra a aplicação de conceitos de Arquitetura de Microsserviços, APIs REST, Docker, Testes Automatizados e Integração Contínua (CI) usando Spring Boot e GitHub Actions.O sistema é composto por dois microsserviços que se comunicam via HTTP para fornecer um catálogo de serviços para clientes e profissionais.
@@ -37,8 +37,8 @@ docker run -d --name uclient -p 8080:8080 --network marketplace-net uclient-serv
 6. Integração Contínua (CI) com GitHub ActionsO arquivo de workflow ci.yml garante que a compilação e os testes sejam executados automaticamente em cada push para o repositório.Localização do Arquivo: .github/workflows/ci.yml8.
 7. Publicação no Render
    URLs dos serviços e os endpoints:
-     uclientpoint.onrender.com/api/clients
-     chatendpoint-8r95.onrender.com/api/chats
-     professionalendpoint.onrender.com/api/prof
-     professionalendpoint.onrender.com/api/feedback
-     professionalendpoint.onrender.com/api/serv
+   - uclientpoint.onrender.com/api/clients
+   - chatendpoint-8r95.onrender.com/api/chats
+   - professionalendpoint.onrender.com/api/prof
+   - professionalendpoint.onrender.com/api/feedback
+   - professionalendpoint.onrender.com/api/serv
